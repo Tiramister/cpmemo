@@ -1,0 +1,16 @@
+<h1>CP Memo</h1>
+
+<p>競技プログラミングの考察を残すサイトです。</p>
+
+<table>
+    <tr>
+        <th>Problem Name</th>
+        <th>Memo</th>
+    </tr>
+    <% @data.each do |obj| %>
+    <tr>
+        <th><a href="<%= obj.url %>"><%= obj.name %></a></th>
+        <th><%= obj.memo %></th>
+    </tr>
+    <% end %>
+</table>
