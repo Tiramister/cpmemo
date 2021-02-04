@@ -1,0 +1,17 @@
+<h1>Edit</h1>
+
+<%= form_for(@memo, url:{controller: 'memos', action: 'update', id: @memo.id}) do |form| %>
+    <label for='name'>Problem Name: </label>
+    <%= form.text_field :name %>
+
+    <label for='url'>Problem URL: </label>
+    <%= form.text_field :url %>
+
+    <label for='memo'>Memo: </label>
+    <%= form.text_field :memo %>
+
+    <%= form.submit %>
+<% end %>
+
+<a href="/memos/<%= @memo.id %>">Back to Show</a>
+<a href="/memos/">Back to Home</a>
