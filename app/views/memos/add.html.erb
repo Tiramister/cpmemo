@@ -1,0 +1,14 @@
+<h1>Create New Memo</h1>
+
+<%= form_for(@memo, url:{controller: 'memos', action: 'create'}) do |form| %>
+    <label for='name'>Problem Name: </label>
+    <%= form.text_field :name %>
+
+    <label for='url'>Problem URL: </label>
+    <%= form.text_field :url %>
+
+    <label for='memo'>Memo: </label>
+    <%= form.text_field :memo %>
+
+    <%= form.submit %>
+<% end %>
